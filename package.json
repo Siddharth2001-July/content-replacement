@@ -1,0 +1,16 @@
+{
+  "name": "content-replacement",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "pspdfkit": "./assets/pspdfkit.tar.gz"
+  },
+  "scripts": {
+    "copyAssets": "cp -R ./node_modules/pspdfkit/dist/ ./assets/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve -l 8080 ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
