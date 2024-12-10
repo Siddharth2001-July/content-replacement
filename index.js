@@ -6,17 +6,21 @@ const baseUrl = `${window.location.protocol}//${window.location.host}/assets/dis
 var _instance = null;
 
 async function runner(docPath) {
-  await PSPDFKit.load({
-    baseUrl,
-    container: "#pspdfkit",
-    document: docPath,
-    toolbarItems: [...PSPDFKit.defaultToolbarItems, { type: "comment" }],
-  })
-    .then(async (instance) => {
-      _instance = instance;
+    await PSPDFKit.load({
+        baseUrl,
+        container: "#pspdfkit",
+        document: docPath,
+        toolbarItems: [...PSPDFKit.defaultToolbarItems, { type: "comment" }],
     })
-    .catch((error) => {
-      console.error(error.message);
-    });
+        .then(async (instance) => {
+            _instance = instance;
+            const lines = await instance.textLinesForPageIndex(0);
+            lines.forEach(element => {
+                debugger
+            });
+        })
+        .catch((error) => {
+            console.error(error.message);
+        });
 }
 runner("./assets/Tofu 1.pdf");
