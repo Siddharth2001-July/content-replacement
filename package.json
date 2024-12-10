@@ -6,7 +6,7 @@
     "pspdfkit": "./assets/pspdfkit.tar.gz"
   },
   "scripts": {
-    "copyAssets": "cp -R ./node_modules/pspdfkit/dist/ ./assets/",
+    "copyAssets": "cp -R ./node_modules/pspdfkit/dist/ ./assets/dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "serve -l 8080 ."
   },
