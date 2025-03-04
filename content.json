@@ -1,0 +1,29 @@
+[
+    {
+        "id": "01JKW9EC6M25ERKT1HZKT147MM",
+        "text": "ProdigyKid",
+        "font": "Helvetica",
+        "fontSize": 43,
+        "horizontalAlign": "left",
+        "isBold": true,
+        "isFitting": true
+    },
+    {
+        "id": "01JKW9DCRX79RT4ZRVGD7PS17T",
+        "text": "The Strength of Self Recognition",
+        "font": "Helvetica",
+        "fontSize": 79,
+        "horizontalAlign": "left",
+        "isBold": true,
+        "isFitting": true
+    },
+    {
+        "id": "01JKW9DVCZ9P10YRAKNNCRNW74",
+        "text": "How Client Purchase Desires Cues May Spark Revenue-Driven Dispatches",
+        "font": "Helvetica",
+        "fontSize": 40,
+        "horizontalAlign": "left",
+        "isBold": true,
+        "isFitting": true
+    }
+]
