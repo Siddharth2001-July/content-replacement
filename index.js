@@ -61,7 +61,7 @@ async function runner(docPath) {
     title: "AI Replace",
     icon: '<svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><text x="4" y="17" font-family="sans-serif" font-size="14" font-weight="bold" fill="currentColor">AI</text></svg>',
     onPress: async (event) => {
-      if (selected.length > 0) {
+      if (editing && selected.length > 0) {
         for (const id of selected) {
           for (const content of contentData) {
             const element = mappingData.TOFU_2.find(element => element.id === id);
@@ -80,14 +80,15 @@ async function runner(docPath) {
               const annotationId = await window.instance.create(annotation);
             }
           }
+        
         }
+        instance.applyOperations([
+          {
+            type: "flattenAnnotations",
+            pageIndexes: [0]
+          }
+        ]);
       }
-      instance.applyOperations([
-        {
-          type: "flattenAnnotations",
-          pageIndexes: [0]
-        }
-      ]);
     }
   };
 
